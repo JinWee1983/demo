@@ -19,7 +19,7 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>demo</talend.job.path>
-    <talend.job.git.commit.id>122096f3ccbbfda4fb9d2d0ad93f326e4ca0b3a0</talend.job.git.commit.id>
+    <talend.job.git.commit.id>9b721a65fae51c4b654cbbbe16fb836df42acd03</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>edwina.hun@sift-ag.com</talend.job.git.author>
@@ -40,7 +40,7 @@
     <talend.product.version>8.0.1.20231017_1026-patch</talend.product.version>
     <talend.project.name>DEMO</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1704960095000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1704977590000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>Demov1</talend.job.name>
