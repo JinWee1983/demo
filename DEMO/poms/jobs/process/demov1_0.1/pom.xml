@@ -3,23 +3,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId></groupId>
+    <groupId>org.example.demo</groupId>
     <artifactId>code.Master</artifactId>
     <version>8.0.1</version>
     <relativePath>../../../</relativePath>
   </parent>
-  <groupId>.job</groupId>
+  <groupId>org.example.demo.job</groupId>
   <artifactId>Demov1</artifactId>
   <version>0.1.0</version>
   <name>DEMO Demov1-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <talend.job.type>Standard</talend.job.type>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
-    <talend.pigudf.groupid>.pigudf</talend.pigudf.groupid>
+    <talend.pigudf.groupid>org.example.demo.pigudf</talend.pigudf.groupid>
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>demo</talend.job.path>
-    <talend.job.git.commit.id>0f06d0086f9cea9add86a1976a640e933708110c</talend.job.git.commit.id>
+    <talend.job.git.commit.id>122096f3ccbbfda4fb9d2d0ad93f326e4ca0b3a0</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>edwina.hun@sift-ag.com</talend.job.git.author>
@@ -28,7 +28,7 @@
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
     <talend.job.parent.id></talend.job.parent.id>
-    <talend.routine.groupid>.code</talend.routine.groupid>
+    <talend.routine.groupid>org.example.demo.code</talend.routine.groupid>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.project.name.lowercase>demo</talend.project.name.lowercase>
@@ -36,11 +36,11 @@
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <talend.project.branch.name>main</talend.project.branch.name>
+    <talend.project.branch.name>v2</talend.project.branch.name>
     <talend.product.version>8.0.1.20231017_1026-patch</talend.product.version>
     <talend.project.name>DEMO</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1704960039000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1704960095000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>Demov1</talend.job.name>
@@ -82,7 +82,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.daikon</groupId>
-      <artifactId>audit-log4j1</artifactId>
+      <artifactId>audit-log4j2</artifactId>
       <version>1.16.1</version>
       <exclusions>
         <exclusion>
@@ -95,6 +95,39 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.10</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.daikon</groupId>
+      <artifactId>crypto-utils</artifactId>
+      <version>7.1.16</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>2.1.3</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.marshalling</groupId>
+      <artifactId>jboss-marshalling</artifactId>
+      <version>2.0.12.Final</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -126,7 +159,29 @@
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-to-slf4j</artifactId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.17.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.17.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
       <version>2.17.1</version>
       <exclusions>
         <exclusion>
@@ -147,30 +202,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>ch.qos.reload4j</groupId>
-      <artifactId>reload4j</artifactId>
-      <version>1.2.22</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>1.7.34</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-reload4j</artifactId>
       <version>1.7.34</version>
       <exclusions>
         <exclusion>
@@ -191,7 +224,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>.code</groupId>
+      <groupId>org.example.demo.code</groupId>
       <artifactId>routines</artifactId>
       <version>8.0.1</version>
     </dependency>
